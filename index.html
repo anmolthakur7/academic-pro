@@ -145,9 +145,153 @@
             color: #667eea;
         }
 
+        /* Sample Work Gallery */
+        .gallery {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(102,126,234,0.2);
+            border-color: #667eea;
+        }
+
+        .gallery-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .gallery-type {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-subject {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .grade-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #ff6b6b;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .gallery-content {
+            padding: 2rem;
+        }
+
+        .gallery-description {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .gallery-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .gallery-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+
+        .btn-success {
+            background: #48bb78;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #38a169;
+        }
+
         /* Countries Section */
         .countries {
             padding: 80px 0;
+            background: #f8f9fa;
         }
 
         .countries-grid {
@@ -173,6 +317,129 @@
         .country-flag {
             font-size: 4rem;
             margin-bottom: 1rem;
+        }
+
+        /* Enhanced Reviews Section with Carousel */
+        .reviews {
+            padding: 80px 0;
+            background: white;
+            position: relative;
+        }
+
+        .reviews-carousel {
+            position: relative;
+            max-width: 900px;
+            margin: 3rem auto 0;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .reviews-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .review-slide {
+            min-width: 100%;
+            padding: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .review-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .review-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .reviewer-avatar {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .reviewer-details h4 {
+            color: white;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        .reviewer-details p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+
+        .stars {
+            color: #ffd700;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-btn {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: #667eea;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background: #5a67d8;
+            transform: scale(1.1);
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(102,126,234,0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .indicator.active {
+            background: #667eea;
+            transform: scale(1.2);
         }
 
         /* Pricing Section */
@@ -240,69 +507,6 @@
             margin-top: 1rem;
         }
 
-        /* Reviews Section */
-        .reviews {
-            padding: 80px 0;
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .review-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
-            border-left: 4px solid #667eea;
-        }
-
-        .review-text {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .reviewer-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .reviewer-avatar {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .reviewer-details h4 {
-            color: #333;
-            margin-bottom: 0.2rem;
-        }
-
-        .reviewer-details p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .stars {
-            color: #ffc107;
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
         .contact {
             padding: 80px 0;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -381,6 +585,18 @@
                 flex-direction: column;
                 gap: 2rem;
             }
+
+            .gallery-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-actions {
+                flex-direction: column;
+            }
+
+            .review-slide {
+                padding: 2rem 1rem;
+            }
         }
     </style>
 </head>
@@ -391,6 +607,9 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Samples</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#reports">Reports</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -443,15 +662,288 @@
         </div>
     </section>
 
-    <section class="countries">
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Sample Work Gallery</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: #666;">Explore our high-quality work samples with plagiarism and AI detection reports</p>
+            
+            <div class="gallery-grid">
+                <!-- Sample 1: Business Essay -->
+                <div class="gallery-item">
+                    <div class="gallery-header">
+                        <div class="gallery-type">Business Essay</div>
+                        <div class="gallery-subject">Marketing Strategy Analysis</div>
+                        <div class="grade-badge">A+</div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-description">
+                            Comprehensive analysis of digital marketing strategies for e-commerce businesses. Includes market research, competitor analysis, and strategic recommendations with real-world case studies.
+                        </div>
+                        <div class="gallery-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">2,847</div>
+                                <div class="stat-label">Words</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">0%</div>
+                                <div class="stat-label">Plagiarism</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">2%</div>
+                                <div class="stat-label">AI Content</div>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <a href="#contact" class="download-btn btn-primary">📞 Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample 2: Computer Science Project -->
+                <div class="gallery-item">
+                    <div class="gallery-header">
+                        <div class="gallery-type">Programming Project</div>
+                        <div class="gallery-subject">Python Web Scraper</div>
+                        <div class="grade-badge">A</div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-description">
+                            Advanced web scraping application using Python with BeautifulSoup and Selenium. Features data cleaning, storage in SQLite database, and visualization with matplotlib.
+                        </div>
+                        <div class="gallery-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">487</div>
+                                <div class="stat-label">Lines of Code</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">0%</div>
+                                <div class="stat-label">Plagiarism</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">0%</div>
+                                <div class="stat-label">AI Content</div>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <a href="#contact" class="download-btn btn-primary">📞 Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample 3: Research Paper -->
+                <div class="gallery-item">
+                    <div class="gallery-header">
+                        <div class="gallery-type">Research Paper</div>
+                        <div class="gallery-subject">Climate Change Impact</div>
+                        <div class="grade-badge">A+</div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-description">
+                            Extensive research on climate change effects on global agriculture. Includes statistical analysis, peer-reviewed sources, and policy recommendations with Harvard referencing.
+                        </div>
+                        <div class="gallery-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">4,523</div>
+                                <div class="stat-label">Words</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1%</div>
+                                <div class="stat-label">Plagiarism</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">3%</div>
+                                <div class="stat-label">AI Content</div>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <a href="#contact" class="download-btn btn-primary">📞 Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample 4: Case Study -->
+                <div class="gallery-item">
+                    <div class="gallery-header">
+                        <div class="gallery-type">Case Study</div>
+                        <div class="gallery-subject">Tesla Market Analysis</div>
+                        <div class="grade-badge">A</div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-description">
+                            In-depth case study analysis of Tesla's market positioning and competitive strategy. Features SWOT analysis, financial modeling, and strategic recommendations.
+                        </div>
+                        <div class="gallery-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">3,156</div>
+                                <div class="stat-label">Words</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">0%</div>
+                                <div class="stat-label">Plagiarism</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1%</div>
+                                <div class="stat-label">AI Content</div>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <a href="#contact" class="download-btn btn-primary">📞 Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample 5: Dissertation Chapter -->
+                <div class="gallery-item">
+                    <div class="gallery-header">
+                        <div class="gallery-type">Dissertation Chapter</div>
+                        <div class="gallery-subject">Machine Learning in Healthcare</div>
+                        <div class="grade-badge">A+</div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-description">
+                            Comprehensive literature review chapter exploring machine learning applications in healthcare diagnostics. Features 80+ peer-reviewed sources and systematic analysis.
+                        </div>
+                        <div class="gallery-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">8,942</div>
+                                <div class="stat-label">Words</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">2%</div>
+                                <div class="stat-label">Plagiarism</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1%</div>
+                                <div class="stat-label">AI Content</div>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <a href="#contact" class="download-btn btn-primary">📞 Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample 6: PowerPoint Presentation -->
+                <div class="gallery-item">
+                    <div class="gallery-header">
+                        <div class="gallery-type">PowerPoint Presentation</div>
+                        <div class="gallery-subject">Digital Transformation</div>
+                        <div class="grade-badge">A</div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-description">
+                            Professional presentation on digital transformation strategies for traditional businesses. Features modern design, infographics, and comprehensive speaker notes.
+                        </div>
+                        <div class="gallery-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">24</div>
+                                <div class="stat-label">Slides</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">0%</div>
+                                <div class="stat-label">Plagiarism</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">0%</div>
+                                <div class="stat-label">AI Content</div>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <a href="#contact" class="download-btn btn-primary">📞 Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reports" class="gallery" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Sample Plagiarism & AI Reports</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 3rem; color: #666;">
+                Download our sample reports to see the quality and transparency we provide with every project
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; max-width: 900px; margin: 0 auto;">
+                <!-- Sample Plagiarism Report -->
+                <div class="gallery-item">
+                    <div class="gallery-header">
+                        <div class="gallery-type">Plagiarism Detection Report</div>
+                        <div class="gallery-subject">Sample Academic Essay</div>
+                        <div class="grade-badge">0% PLAG</div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-description">
+                            Complete plagiarism scan report showing 0% similarity with detailed breakdown of sources, citations, and originality verification. Generated using professional plagiarism detection software.
+                        </div>
+                        <div class="gallery-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">2,847</div>
+                                <div class="stat-label">Words Scanned</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">0%</div>
+                                <div class="stat-label">Similarity</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Original</div>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <a href="#" class="download-btn btn-secondary" onclick="downloadSampleReport('plagiarism')" style="width: 100%;">📄 Download Sample Report</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample AI Detection Report -->
+                <div class="gallery-item">
+                    <div class="gallery-header">
+                        <div class="gallery-type">AI Content Detection Report</div>
+                        <div class="gallery-subject">Sample Research Paper</div>
+                        <div class="grade-badge">1% AI</div>
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-description">
+                            Comprehensive AI detection analysis showing minimal AI-generated content with detailed sentence-by-sentence breakdown. Proves authentic human writing and academic integrity.
+                        </div>
+                        <div class="gallery-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">4,523</div>
+                                <div class="stat-label">Words Analyzed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1%</div>
+                                <div class="stat-label">AI Content</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">99%</div>
+                                <div class="stat-label">Human Written</div>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <a href="#" class="download-btn btn-success" onclick="downloadSampleReport('ai')" style="width: 100%;">📄 Download Sample Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call-to-action for report services -->
+            <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: linear-gradient(45deg, #667eea, #764ba2); border-radius: 20px; color: white;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">📊 Get Your Own Plagiarism & AI Reports</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
+                    Submit your existing work and get detailed plagiarism and AI detection reports within 24 hours
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#contact" class="cta-button" style="background: #ff6b6b; margin: 0;">📝 Submit for Reports</a>
+                    <a href="https://wa.me/917087604536" target="_blank" class="cta-button" style="background: rgba(255,255,255,0.2); margin: 0;">💬 WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
         <div class="container">
             <h2 class="section-title">Serving International Students In</h2>
             <div class="countries-grid">
-                <div class="country-card">
-                    <div class="country-flag">🇺🇸</div>
-                    <h3>United States</h3>
-                    <p>Supporting students across American universities with US academic standards and formatting.</p>
-                </div>
                 <div class="country-card">
                     <div class="country-flag">🇬🇧</div>
                     <h3>United Kingdom</h3>
@@ -466,6 +958,128 @@
                     <div class="country-flag">🇨🇦</div>
                     <h3>Canada</h3>
                     <p>Professional academic support tailored to Canadian university guidelines and expectations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: #666;">Real feedback from satisfied international students worldwide</p>
+            
+            <div class="reviews-carousel">
+                <div class="reviews-track" id="reviewsTrack">
+                    <!-- Review Slide 1 -->
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <div class="review-text">
+                                "Absolutely amazing service! Got my business assignment completed with an A+ grade. The plagiarism report showed 0% similarity and the work was completely original. Will definitely use their services again!"
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">SM</div>
+                                <div class="reviewer-details">
+                                    <h4>Sarah Martinez</h4>
+                                    <p>Business Management • University of Toronto</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Slide 2 -->
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <div class="review-text">
+                                "The Python project was exactly what I needed! Clean, well-documented code with detailed explanations. The AI detection report confirmed it was 100% human-written code. Highly recommended for programming assignments!"
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">RK</div>
+                                <div class="reviewer-details">
+                                    <h4>Raj Kumar</h4>
+                                    <p>Computer Science • University of Melbourne</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Slide 3 -->
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <div class="review-text">
+                                "My dissertation chapter on machine learning was outstanding! 80+ references, perfect Harvard formatting, and only 1% plagiarism which was just common phrases. The quality exceeded my expectations completely."
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">EJ</div>
+                                <div class="reviewer-details">
+                                    <h4>Emily Johnson</h4>
+                                    <p>PhD Data Science • Oxford University</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Slide 4 -->
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <div class="review-text">
+                                "The PowerPoint presentation was professionally designed with great visuals and comprehensive speaker notes. Delivered on time and helped me ace my final presentation. Great value for money!"
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">MP</div>
+                                <div class="reviewer-details">
+                                    <h4>Michael Park</h4>
+                                    <p>Marketing • UCLA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Slide 5 -->
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <div class="review-text">
+                                "Excellent research paper on climate change! 4,500+ words with current data, peer-reviewed sources, and perfect APA formatting. The plagiarism check showed only 1% similarity. Absolutely worth every penny!"
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">AL</div>
+                                <div class="reviewer-details">
+                                    <h4>Aisha Lopez</h4>
+                                    <p>Environmental Science • University of Sydney</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Slide 6 -->
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <div class="review-text">
+                                "The Tesla case study was incredibly detailed with SWOT analysis, financial modeling, and strategic recommendations. Got an A grade and the professor praised the depth of analysis. Highly professional work!"
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">DW</div>
+                                <div class="reviewer-details">
+                                    <h4>David Wilson</h4>
+                                    <p>MBA • London Business School</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-nav">
+                    <button class="carousel-btn" id="prevBtn">❮</button>
+                    <button class="carousel-btn" id="nextBtn">❯</button>
+                </div>
+
+                <div class="carousel-indicators" id="indicators">
+                    <!-- Indicators will be generated by JavaScript -->
                 </div>
             </div>
         </div>
@@ -616,6 +1230,146 @@
                 header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
             }
         });
+
+        // Reviews Carousel Functionality
+        class ReviewsCarousel {
+            constructor() {
+                this.track = document.getElementById('reviewsTrack');
+                this.slides = this.track.children;
+                this.currentSlide = 0;
+                this.totalSlides = this.slides.length;
+                
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.indicatorsContainer = document.getElementById('indicators');
+                
+                this.init();
+            }
+            
+            init() {
+                this.createIndicators();
+                this.setupEventListeners();
+                this.updateCarousel();
+                this.startAutoSlide();
+            }
+            
+            createIndicators() {
+                for (let i = 0; i < this.totalSlides; i++) {
+                    const indicator = document.createElement('div');
+                    indicator.className = 'indicator';
+                    indicator.addEventListener('click', () => this.goToSlide(i));
+                    this.indicatorsContainer.appendChild(indicator);
+                }
+            }
+            
+            setupEventListeners() {
+                this.prevBtn.addEventListener('click', () => this.previousSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+            }
+            
+            updateCarousel() {
+                const translateX = -this.currentSlide * 100;
+                this.track.style.transform = `translateX(${translateX}%)`;
+                
+                // Update indicators
+                const indicators = this.indicatorsContainer.children;
+                for (let i = 0; i < indicators.length; i++) {
+                    indicators[i].classList.toggle('active', i === this.currentSlide);
+                }
+            }
+            
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateCarousel();
+                this.resetAutoSlide();
+            }
+            
+            previousSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.updateCarousel();
+                this.resetAutoSlide();
+            }
+            
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.updateCarousel();
+                this.resetAutoSlide();
+            }
+            
+            startAutoSlide() {
+                this.autoSlideInterval = setInterval(() => {
+                    this.nextSlide();
+                }, 5000); // Change slide every 5 seconds
+            }
+            
+            resetAutoSlide() {
+                clearInterval(this.autoSlideInterval);
+                this.startAutoSlide();
+            }
+        }
+        
+        // Initialize carousel when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new ReviewsCarousel();
+        });
+
+        // Sample Report Download Functions
+        function downloadSampleReport(reportType) {
+            const reports = {
+                'plagiarism': {
+                    file: 'Sample_Plagiarism_Report.pdf',
+                    description: 'Sample Plagiarism Detection Report showing 0% similarity'
+                },
+                'ai': {
+                    file: 'Sample_AI_Detection_Report.pdf',
+                    description: 'Sample AI Content Detection Report showing 1% AI content'
+                }
+            };
+            
+            const report = reports[reportType];
+            
+            // In a real implementation, replace this with actual file download
+            alert(`Downloading: ${report.file}\n\n${report.description}\n\nContact us to get similar reports for your own work!`);
+            
+            // Example of how to implement actual file download:
+            // const link = document.createElement('a');
+            // link.href = '/path/to/your/' + report.file;
+            // link.download = report.file;
+            // document.body.appendChild(link);
+            // link.click();
+            // document.body.removeChild(link);
+        }
+
+        // Add animation to gallery items on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe gallery items
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(50px)';
+                item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(item);
+            });
+        });
     </script>
 </body>
 </html>
+                    <div class="country-flag">🇺🇸</div>
+                    <h3>United States</h3>
+                    <p>Supporting students across American universities with US academic standards and formatting.</p>
+                </div>
+                <div class="country-card">
